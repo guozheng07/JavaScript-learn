@@ -1,0 +1,13 @@
+{
+    "presets": [
+        // 通过安装和配置 babel-preset-env 预设来告诉 babel 将 ES2015 代码转化为 ES5 代码
+        [
+            "env",
+            {
+                "targets": {
+                    "ie": "11"
+                }
+            }
+        ]
+    ]
+}
