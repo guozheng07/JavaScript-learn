@@ -41,7 +41,12 @@ function addParagraph(parent, html) {
 
 ## 循环中的块级作用域
 **每个循环迭代都有自己的块变量，正如对同一函数的不同调用都有自己的局部变量一样。** 所以块级作用域可以解决经典的“循环中的闭包”问题。  
-示例：closures-in-loops-problem.js、closures-in-loops-es5.js、closures-in-loops-with-let.js
+闭包的原理（和作用域链相关）：  
+当代码执行到一个包含块级作用域标识符的块内时，该块的环境对象以包含该块的代码的环境对象作为块的外部环境对象。当函数被调用时，调用的
+环境对象以创建函数的环境对象（该对象保存在函数上，规范将其称为函数的[[environment]]内部插槽）作为其外部环境对象，这就是闭包的工作原理。  
+示例
+- for 循环中的闭包：closures-in-loops-problem.js、closures-in-loops-es5.js、closures-in-loops-with-let.js
+- while 循环中的闭包：closures-in-while-loops.js
 
 
 
